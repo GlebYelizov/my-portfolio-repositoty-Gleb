@@ -1,0 +1,82 @@
+section.aboutme {
+	display: block;
+	overflow: hidden;
+	.aboutme__inner {
+		padding: 126px 0;
+		@include flex_row_bw_center;
+		.aboutme__photo {
+			width: 50%;
+			display: flex;
+			justify-content: flex-start;
+			position: relative;
+			z-index: 1;
+			.aboutme__img {
+				position: relative;
+				z-index: 3;
+				}
+			}
+			.aboutme__photo:after {
+				content: "";
+				width: 422px;
+				height: 206px;
+				position: absolute;
+				left: 4px;
+				bottom: 0;
+				z-index: 2;
+				background-color: $light-grey;
+		}
+		.aboutme__content {
+			width: 50%;
+			padding: 0 70px 0 20px;
+			h3 {
+				font-size: 45px;
+				font-weight: 700;
+				color: $black;
+				line-height: 1.1;
+			}
+			h4 {
+				margin-left: -10px;
+				font-size: 92px;
+				font-weight: 700;
+				color: $light-grey;
+				margin-bottom: 30px;
+			}
+			p {
+				font-size: 12px;
+				font-weight: 300;
+				color: $grey;
+				line-height: 2;
+			}
+			.aboutme__buttons {
+				margin-top: 40px;
+				display: block;
+				.button {
+					@include button_big;
+					}
+				.intro__hireme {
+					border-color: $black;
+					color: $white;
+					background-color: $black;
+					@include transition_color;
+					&:hover {
+						color: $black;
+						background-color: $white;
+						@include transition_color;
+					}
+				}
+				.intro__resume {
+					margin-left: 12px;
+					border-color: $grey;
+					color: $grey;
+					background-color: $white;
+					@include transition_color;
+					&:hover {
+						color: $white;
+						background-color: $grey;
+						@include transition_color;
+					}
+				}
+			}
+		}
+	}
+}

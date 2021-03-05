@@ -1,0 +1,104 @@
+section.skills {
+	width:100%;
+	display:block;
+	position:relative;
+	margin: 220px 0 100px;
+	h3 {
+		display: block;
+		margin-bottom: 12px;
+		font-size: 45px;
+		font-weight: 700;
+		color: $black;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	h4 {
+		display: block;
+		margin-bottom: 12px;
+		font-size: 18px;
+		font-weight: 200;
+		color: $grey;
+		text-transform: capitalize;
+		text-align: center;
+	}
+	.skills__content {
+		@include flex_row_bw_center;
+		align-items: flex-start;
+
+		.skills__item {
+			width: 33.3333%;
+			.skill-picture {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width:100%;
+				padding: 12px 48px 12px 48px;
+				img {
+						
+						width: 50%;
+						margin: 0 auto;
+				}
+			}
+			h5 {
+				margin-top: 8px;
+				margin-bottom: 8px;
+				font-weight: 700;
+				font-zize: 18px;
+				color: $black;
+				text-transform: uppercase;
+				text-align: center;
+			}
+			ul {
+				padding-left: 20%;
+
+			li {
+				position: relative;
+				z-index: 1;
+				font-weight: 300;
+				font-size: 14px;
+				color: $grey;
+				line-height: 1.6;
+				}
+				.skill-with-befor:before {
+					content: "";
+					width: 6px;
+					height: 1px;
+					position: absolute;
+					top: 45%;
+					left: -10px;
+					z-index: 3;
+					background-color: $grey;
+				}
+				h6 {
+					position: relative;
+					z-index: 1;
+					margin-top: 8px;
+					margin-bottom: 8px;
+					font-weight: 600;
+					font-zize: 12px;
+					color: $black;
+				}
+				h6:before {
+					content: "";
+					width: 6px;
+					height: 1px;
+					position: absolute;
+					top: 45%;
+					left: -10px;
+					z-index: 3;
+					background-color: $black;
+				}
+				ul {
+					padding-left: 5%;
+					li {
+
+					}
+				}
+
+
+
+
+}
+		}
+	}
+}

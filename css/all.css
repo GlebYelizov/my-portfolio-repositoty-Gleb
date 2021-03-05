@@ -1,0 +1,701 @@
+/* SCSS Compiled */
+/***************************************************              GENERAL RESET STYLES             ***************************************************/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+}
+
+form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+input, textarea, select {
+  vertical-align: middle;
+  color: #000;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+input::-webkit-input-placeholder {
+  color: #ebedec;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: #ebedec;
+}
+
+/*@media*/
+/* @media (min-width: 1921px){} 													QHD \ UHD
+@media (min-width: 1600px) and (max-width: 1919px) {}	HD +
+@media (min-width: 1440px) and (max-width: 1599px) {}	macbook
+@media (min-width: 1360px) and (max-width: 1439px) {}	HD
+@media (min-width: 1280px) and (max-width: 1359px) {} IPAD2
+@media (min-width: 1024px) and (max-width: 1279px) {} IPAD
+@media (min-width: 896px) and (max-width: 1023px) {}	Ip Xs max horizontal
+@media (min-width: 812px) and (max-width: 895px) {}		Ip Xs horizontal
+@media (min-width: 768px) and (max-width: 811px) {}		Tablet
+@media (min-width: 736px) and (max-width: 767px) {}		Ip 6,7,8 Plus horizontal
+@media (min-width: 667px) and (max-width: 735px) {}		Ip 6,7,8 horizontal
+@media (min-width: 568px) and (max-width: 666px) {}		Ip 5 horizontal
+@media (min-width: 480px) and (max-width: 567px) {}		Ip 4 horizontal
+@media (min-width: 414px) and (max-width: 479px) {}		Ip 6,7,8
+@media (min-width: 320px) and (max-width: 413px) {}		Ip 4,5 */
+/*@media end*/
+/*usage  @include font-size(13);*/
+/* Brand Colors ------------------------------------------------*/
+/* wrapper */
+#wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.layout {
+  margin: 0 auto;
+  position: relative;
+  width: 1198px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+main {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+#content {
+  position: relative;
+}
+
+#sidebar {
+  position: relative;
+}
+
+aside {
+  position: relative;
+}
+
+header {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+header .header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+header .header__inner .user {
+  display: flex;
+  align-items: center;
+}
+header .header__inner .user .user__avatar {
+  height: 57px;
+  width: 57px;
+}
+header .header__inner .user .user__avatar img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #dedede;
+}
+header .header__inner .user h1 {
+  text-indent: -9999px;
+}
+header .header__inner .user .user__content {
+  padding-left: 10px;
+}
+header .header__inner .user .user__content p {
+  font-weight: 700;
+}
+header .header__inner .user .user__content p:last-child {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 400;
+}
+header .header__inner nav {
+  display: flex;
+}
+header .header__inner nav ul {
+  display: flex;
+  align-items: center;
+}
+header .header__inner nav ul li {
+  margin-right: 40px;
+}
+header .header__inner nav ul li:last-child {
+  margin-right: 0px;
+}
+header .header__inner nav ul li a.nav_link {
+  font-size: 14px;
+  color: #2b2a2c;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+header .header__inner nav ul li a.nav_link:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #2b2a2c;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  z-index: 3;
+  transition: width 0.2s linear;
+}
+header .header__inner nav ul li a.nav_link:hover:not(.nav_lastlink):after {
+  width: 100%;
+  transition: width 0.2s linear;
+}
+header .header__inner nav ul li a.nav_lastlink {
+  padding: 10px 30px;
+  border: 2px #2b2a2c solid;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #2b2a2c;
+  transition: color 0.2s linear;
+}
+header .header__inner nav ul li a.nav_lastlink:hover {
+  background-color: #2b2a2c;
+  color: #ffffff;
+  transition: color 0.2s linear;
+}
+
+section.intro {
+  display: block;
+  overflow: hidden;
+}
+section.intro .intro__inner {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 100px 0;
+  border-bottom: 1px #717072 solid;
+  background-image: url(../images/photo_background.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+section.intro .intro__inner h4 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #2b2a2c;
+  margin-bottom: 8px;
+}
+section.intro .intro__inner h3 {
+  font-size: 45px;
+  font-weight: 700;
+  color: #2b2a2c;
+  margin-bottom: 6px;
+}
+section.intro .intro__inner p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #717072;
+  margin-bottom: 26px;
+}
+section.intro .intro__inner .intro__socials {
+  display: flex;
+  margin-bottom: 42px;
+}
+section.intro .intro__inner .intro__socials .social_link {
+  width: 41px;
+  height: 41px;
+  margin-right: 12px;
+  transition: transform 0.2s linear;
+}
+section.intro .intro__inner .intro__socials .social_link.social_link:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s linear;
+}
+section.intro .intro__inner .intro__socials .social_link img {
+  width: 100%;
+  height: 100%;
+}
+section.intro .intro__inner .intro__buttons {
+  display: block;
+}
+section.intro .intro__inner .intro__buttons .button {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1.375em 3em;
+  border: 2px solid;
+  border-radius: 40px;
+}
+section.intro .intro__inner .intro__buttons .intro__hireme {
+  border-color: #2b2a2c;
+  color: #ffffff;
+  background-color: #2b2a2c;
+  transition: color 0.2s linear;
+}
+section.intro .intro__inner .intro__buttons .intro__hireme:hover {
+  color: #2b2a2c;
+  background-color: #ffffff;
+  transition: color 0.2s linear;
+}
+section.intro .intro__inner .intro__buttons .intro__resume {
+  margin-left: 12px;
+  border-color: #717072;
+  color: #717072;
+  background-color: #ffffff;
+  transition: color 0.2s linear;
+}
+section.intro .intro__inner .intro__buttons .intro__resume:hover {
+  color: #ffffff;
+  background-color: #717072;
+  transition: color 0.2s linear;
+}
+section.intro .intro__inner .intro__photo {
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  z-index: 3;
+}
+
+section.aboutme {
+  display: block;
+  overflow: hidden;
+}
+section.aboutme .aboutme__inner {
+  padding: 126px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section.aboutme .aboutme__inner .aboutme__photo {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 1;
+}
+section.aboutme .aboutme__inner .aboutme__photo .aboutme__img {
+  position: relative;
+  z-index: 3;
+}
+section.aboutme .aboutme__inner .aboutme__photo:after {
+  content: "";
+  width: 422px;
+  height: 206px;
+  position: absolute;
+  left: 4px;
+  bottom: 0;
+  z-index: 2;
+  background-color: #dedede;
+}
+section.aboutme .aboutme__inner .aboutme__content {
+  width: 50%;
+  padding: 0 70px 0 20px;
+}
+section.aboutme .aboutme__inner .aboutme__content h3 {
+  font-size: 45px;
+  font-weight: 700;
+  color: #2b2a2c;
+  line-height: 1.1;
+}
+section.aboutme .aboutme__inner .aboutme__content h4 {
+  margin-left: -10px;
+  font-size: 92px;
+  font-weight: 700;
+  color: #dedede;
+  margin-bottom: 30px;
+}
+section.aboutme .aboutme__inner .aboutme__content p {
+  font-size: 12px;
+  font-weight: 300;
+  color: #717072;
+  line-height: 2;
+}
+section.aboutme .aboutme__inner .aboutme__content .aboutme__buttons {
+  margin-top: 40px;
+  display: block;
+}
+section.aboutme .aboutme__inner .aboutme__content .aboutme__buttons .button {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1.375em 3em;
+  border: 2px solid;
+  border-radius: 40px;
+}
+section.aboutme .aboutme__inner .aboutme__content .aboutme__buttons .intro__hireme {
+  border-color: #2b2a2c;
+  color: #ffffff;
+  background-color: #2b2a2c;
+  transition: color 0.2s linear;
+}
+section.aboutme .aboutme__inner .aboutme__content .aboutme__buttons .intro__hireme:hover {
+  color: #2b2a2c;
+  background-color: #ffffff;
+  transition: color 0.2s linear;
+}
+section.aboutme .aboutme__inner .aboutme__content .aboutme__buttons .intro__resume {
+  margin-left: 12px;
+  border-color: #717072;
+  color: #717072;
+  background-color: #ffffff;
+  transition: color 0.2s linear;
+}
+section.aboutme .aboutme__inner .aboutme__content .aboutme__buttons .intro__resume:hover {
+  color: #ffffff;
+  background-color: #717072;
+  transition: color 0.2s linear;
+}
+
+section.skills {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin: 220px 0 100px;
+}
+section.skills h3 {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 45px;
+  font-weight: 700;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  text-align: center;
+}
+section.skills h4 {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 200;
+  color: #717072;
+  text-transform: capitalize;
+  text-align: center;
+}
+section.skills .skills__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+section.skills .skills__content .skills__item {
+  width: 33.3333%;
+}
+section.skills .skills__content .skills__item .skill-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px 48px 12px 48px;
+}
+section.skills .skills__content .skills__item .skill-picture img {
+  width: 50%;
+  margin: 0 auto;
+}
+section.skills .skills__content .skills__item h5 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-zize: 18px;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  text-align: center;
+}
+section.skills .skills__content .skills__item ul {
+  padding-left: 20%;
+}
+section.skills .skills__content .skills__item ul li {
+  position: relative;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 14px;
+  color: #717072;
+  line-height: 1.6;
+}
+section.skills .skills__content .skills__item ul .skill-with-befor:before {
+  content: "";
+  width: 6px;
+  height: 1px;
+  position: absolute;
+  top: 45%;
+  left: -10px;
+  z-index: 3;
+  background-color: #717072;
+}
+section.skills .skills__content .skills__item ul h6 {
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-zize: 12px;
+  color: #2b2a2c;
+}
+section.skills .skills__content .skills__item ul h6:before {
+  content: "";
+  width: 6px;
+  height: 1px;
+  position: absolute;
+  top: 45%;
+  left: -10px;
+  z-index: 3;
+  background-color: #2b2a2c;
+}
+section.skills .skills__content .skills__item ul ul {
+  padding-left: 5%;
+}
+section.reviews {
+  display: block;
+  position: relative;
+  z-index: 1;
+  padding: 70px 0;
+  background: #332f30 url("../images/reviews_bg.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+section.reviews .reviews__content {
+  position: relative;
+  padding-left: 180px;
+  padding-right: 180px;
+}
+section.reviews .reviews__content p {
+  font-size: 14px;
+  font-weight: 200;
+  font-style: italic;
+  line-height: 2.2;
+  color: #ffffff;
+  text-align: center;
+}
+section.reviews .reviews__autor {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 24px;
+  z-index: 3;
+  text-align: center;
+}
+section.reviews .reviews__autor .reviews__avatar {
+  display: block;
+  margin: auto;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: #dedede;
+  border: 2px #ffffff solid;
+}
+section.reviews .reviews__autor .reviews__name {
+  display: block;
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2b2a2c;
+}
+section.reviews .reviews__autor .reviews__company {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  color: #717072;
+  margin-top: 6px;
+}
+section.reviews .reviews__autor .reviews__rating {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+section.reviews .reviews__autor .reviews__rating .rating__star {
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 14px;
+  height: 14px;
+  fill: #2b2a2c;
+}
+section.reviews .reviews__autor .reviews__rating .rating__star:hover {
+  fill: #717072;
+}
+
+footer {
+  display: block;
+  width: 100%;
+  margin: 100px 0 0;
+  padding: 0 0 0;
+  background-color: #2b2a2c;
+}
+footer .footer__inner {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+footer .footer__inner .footer__credits {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+footer .footer__inner .footer__credits .footer__copyright {
+  padding-right: 18px;
+  border-right: 1px #717072 solid;
+}
+footer .footer__inner .footer__credits .footer__copyright p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #717072;
+  line-height: 1.6;
+}
+footer .footer__inner .footer__credits .footer__socials {
+  display: flex;
+  align-items: center;
+}
+footer .footer__inner .footer__credits .footer__socials .footer__soc_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  margin-left: 8px;
+}
+footer .footer__inner .footer__credits .footer__socials .footer__soc_link .footer__soc_svg {
+  fill: #717072;
+  height: 18px;
+  width: 18px;
+  transition: all 0.2s linear;
+}
+footer .footer__inner .footer__credits .footer__socials .footer__soc_link:hover .footer__soc_svg {
+  fill: #dedede;
+  height: 24px;
+  width: 24px;
+  transition: all 0.2s linear;
+}
+footer .footer__inner .footer__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer__inner .footer__nav .footer__nav-link {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  overflow: visible;
+  margin-left: 22px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #717072;
+  text-transform: capitalize;
+  transition: color 0.2s linear;
+}
+footer .footer__inner .footer__nav .footer__nav-link:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #dedede;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  z-index: 3;
+  transition: width 0.2s linear;
+}
+footer .footer__inner .footer__nav .footer__nav-link:hover:not(.footer__nav-last-link):after {
+  width: 100%;
+  transition: width 0.2s linear;
+}
+footer .footer__inner .footer__nav .footer__nav-link:hover {
+  color: #dedede;
+  transition: color 0.2s linear;
+}
+footer .footer__inner .footer__nav .footer__nav-last-link {
+  padding: 8px 24px;
+  border: 2px #717072 solid;
+  border-radius: 25px;
+  background-color: none;
+  color: #717072;
+  transition: color 0.2s linear;
+}
+footer .footer__inner .footer__nav .footer__nav-last-link:hover {
+  background-color: #dedede;
+  border: 2px #dedede solid;
+  color: #2b2a2c;
+  transition: color 0.2s linear;
+}

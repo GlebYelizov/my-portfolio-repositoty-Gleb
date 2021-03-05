@@ -1,0 +1,68 @@
+section.reviews {
+	display: block;
+	position: relative;
+	z-index: 1;
+	padding: 70px 0;
+	background: #332f30	url("../images/reviews_bg.png") no-repeat;
+	background-position: center;
+	background-size: contain;
+	.reviews__content {
+		position: relative;
+		padding-left: 180px;
+		padding-right: 180px;
+		p {
+			font-size: 14px;
+			font-weight: 200;
+			font-style: italic;
+			line-height: 2.2;
+			color: $white;
+			text-align: center;
+		}
+	}
+	.reviews__autor {
+		width: 100%;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		margin-top: 24px;
+		z-index: 3;
+		text-align: center;
+		.reviews__avatar {
+			display: block;
+			margin:  auto;
+			width: 96px;
+			height: 96px;
+			border-radius: 50%;
+			background-color: $light-grey;
+			border: 2px $white solid;
+		}
+		.reviews__name {
+			display: block;
+			margin-top: 4px;
+			font-size: 16px;
+			font-weight: 700;
+			color: $black;
+		}
+		.reviews__company {
+			display: block;
+			font-size: 14px;
+			font-style: italic;
+			color: $grey;
+			margin-top: 6px;
+		}
+		.reviews__rating {
+			margin-top: 6px;
+			margin-bottom: 6px;
+			.rating__star {
+				margin-left: 2px;
+				margin-right: 2px;
+				width: 14px;
+				height: 14px;
+				fill: $black;
+				}
+				.rating__star:hover {
+					fill: $grey;
+			}
+		}
+	}
+}

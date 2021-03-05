@@ -1,0 +1,90 @@
+section.intro {
+	display: block;
+	overflow: hidden;
+	.intro__inner {
+		position: relative;
+		z-index: 1;
+		display: block;
+		padding: 100px 0;
+		border-bottom: 1px $grey solid;
+		background-image: url(../images/photo_background.png);
+		background-position: right bottom;
+		background-repeat: no-repeat;
+		h4 {
+			font-size: 32px;
+			font-weight: 300;
+			color: $black;
+			margin-bottom: 8px;
+		}
+		h3 {
+			font-size: 45px;
+			font-weight: 700;
+			color: $black;
+			margin-bottom: 6px;
+		}
+		p {
+			font-size: 18px;
+			font-weight: 400;
+			color: $grey;
+			margin-bottom: 26px;
+		}
+		.intro__socials {
+			display: flex;
+			margin-bottom: 42px;
+			.social_link {
+				width: 41px;
+				height: 41px;
+				margin-right: 12px;
+				@include transition_transform;
+				&.social_link:hover {
+					-moz-transform: translateY(-5px);
+					-webkit-transform: translateY(-5px);
+					-o-transform: translateY(-5px);
+					-ms-transform: translateY(-5px);
+					transform: translateY(-5px);
+					@include transition_transform;
+				}
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			}
+			.intro__buttons {
+				display: block;
+				.button {
+					@include button_big;
+					}
+				.intro__hireme {
+					border-color: $black;
+					color: $white;
+					background-color: $black;
+					@include transition_color;
+					&:hover {
+						color: $black;
+						background-color: $white;
+						@include transition_color;
+					}
+				}
+				.intro__resume {
+					margin-left: 12px;
+					border-color: $grey;
+					color: $grey;
+					background-color: $white;
+					@include transition_color;
+					&:hover {
+						color: $white;
+						background-color: $grey;
+						@include transition_color;
+					}
+				}
+			}
+			.intro__photo {
+				position: absolute;
+				right: 100px;
+				bottom: 0;
+				z-index: 3;
+
+			}
+		}
+	}

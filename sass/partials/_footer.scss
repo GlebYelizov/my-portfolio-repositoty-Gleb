@@ -1,0 +1,106 @@
+footer {
+	display:block;
+	width:100%;
+	margin:100px 0 0;
+	padding:0 0 0;
+	background-color: $black;
+	.footer__inner {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		.footer__credits {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			.footer__copyright {
+				padding-right: 18px;
+				border-right: 1px $grey solid;
+				p {
+					font-weight: 400;
+					font-size: 14px;
+					color: $grey;
+					line-height: 1.6;
+				}
+			}
+			.footer__socials {
+				display: flex;
+				align-items: center;
+				.footer__soc_link {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 30px;
+					width: 30px;
+					margin-left: 8px;
+					.footer__soc_svg {
+						fill: $grey;
+						height: 18px;
+						width: 18px;
+							@include transition_all;
+					}
+				}
+				.footer__soc_link:hover .footer__soc_svg {
+					fill: $light-grey;
+					height: 24px;
+					width: 24px;
+					@include transition_all;
+				}
+			}
+
+		}
+		.footer__nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.footer__nav-link {
+				position: relative;
+				z-index: 1;
+				display: inline-block;
+				overflow: visible;
+				margin-left: 22px;
+				font-weight: 600;
+				font-size: 14px;
+				color: $grey;
+				text-transform: capitalize;
+				@include transition_color;
+				&:after {
+					content: "";
+					width: 0;
+					height: 2px;
+					background-color: $light-grey;
+					position: absolute;
+					bottom: -5px;
+					left: 0;
+					z-index: 3;
+					@include transition_width;
+					}
+				}
+				.footer__nav-link:hover:not(.footer__nav-last-link):after {
+					width: 100%;
+					@include transition_width;
+			}
+			.footer__nav-link:hover {
+				color: $light-grey;
+				@include transition_color;
+			}
+			.footer__nav-last-link {
+					padding: 8px 24px;
+					border: 2px $grey solid;
+					border-radius: 25px;
+					background-color: none;
+					color: $grey;
+					@include transition_color;
+					&:hover {
+						background-color: $light-grey;
+						border: 2px $light-grey solid;
+						color: $black;
+						@include transition_color;
+					}
+				}
+		}
+	}
+}

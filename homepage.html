@@ -1,0 +1,380 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width; initial-scale=1">
+	<link rel="stylesheet" href="css/all.css" type="text/css"/>
+	<link rel="stylesheet" href="sass/fonts.css" type="text/css"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,200;1,400&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<title>Yelizov Gleb</title>
+</head>
+
+<body>
+
+	<svg display="none">
+		<symbol id="star_half" viewBox="0 0 475.044 475.044">
+			<g>
+				<path d="M474.487,183.276c-1.711-5.236-6.852-8.52-15.41-9.851l-143.323-20.839L251.52,22.681c-4-7.804-8.661-11.704-13.989-11.704
+					c-5.519,0-10.183,3.9-13.988,11.704l-64.241,129.905L15.978,173.425c-8.564,1.332-13.704,4.615-15.415,9.851
+					c-1.709,5.236,0.478,10.898,6.567,16.989l103.924,101.068L86.501,444.082c-0.95,6.286-0.381,11.173,1.715,14.702
+					c2.092,3.524,5.33,5.283,9.707,5.283c3.237,0,7.043-1.14,11.42-3.433l128.194-67.382l128.19,67.382
+					c4.377,2.286,8.186,3.433,11.423,3.433c4.381,0,7.622-1.759,9.709-5.283c2.088-3.529,2.659-8.416,1.708-14.702l-24.551-142.749
+					l103.63-101.068C473.93,194.174,476.212,188.512,474.487,183.276z M338.597,275.065l-13.99,13.421l3.43,18.843l17.128,101.357
+					l-90.786-47.965l-16.848-8.856V76.927l45.395,91.933l8.559,17.128l18.85,2.856l101.642,14.844L338.597,275.065z"/>
+			</g>
+		</symbol>
+		<symbol id="star_filled" viewBox="0 0 512.002 512.002">
+			<g>
+				<path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
+					c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
+					c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
+					c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
+					l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
+					C511.56,208.649,513.033,202.688,511.267,197.258z"/>
+			</g>
+		</symbol>
+		<symbol id="star_empty" viewBox="0 0 477.899 477.899">
+			<g>
+				<path d="M469.11,170.122c-5.462-6.13-12.926-10.117-21.058-11.249v-0.017l-127.01-17.545L270.781,21.213
+					c-7.339-17.579-27.539-25.88-45.117-18.541c-8.38,3.499-15.043,10.161-18.541,18.541l-50.261,120.098l-127.01,17.545
+					c-18.923,2.634-32.128,20.111-29.494,39.034c1.132,8.132,5.119,15.596,11.249,21.058l95.693,85.333L87.638,438.185
+					c-2.13,13.597,4.115,27.144,15.838,34.355c11.558,7.391,26.425,7.115,37.7-0.7l97.775-66.492l97.775,66.56
+					c15.777,10.708,37.248,6.599,47.957-9.178c4.866-7.17,6.859-15.907,5.582-24.477l-19.661-133.956l95.693-85.333
+					C480.561,206.254,481.821,184.386,469.11,170.122z M341.01,285.012c-4.281,3.825-6.352,9.545-5.513,15.224l20.48,143.36
+					l-107.383-73.011c-5.789-3.934-13.394-3.934-19.183,0l-108.015,72.567l21.009-142.984c0.816-5.656-1.254-11.345-5.513-15.155
+					l-102.4-92.297l136.67-18.859c5.984-0.825,11.085-4.752,13.414-10.325l54.579-129.399c0.062,0.076,0.108,0.163,0.137,0.256
+					l54.016,129.075c2.329,5.573,7.431,9.5,13.414,10.325l136.841,19.695L341.01,285.012z"/>
+			</g>
+		</symbol>
+
+		<symbol id="fb_grey" viewBox="0 0 24 24">
+			<g>
+				<path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
+			</g>
+		</symbol>
+
+		<symbol id="ig_grey" viewBox="0 0 511 511.9">
+			<g>
+				<path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/>
+			</g>
+		</symbol>
+
+		<symbol id="in_grey" viewBox="0 0 552.77 552.77">
+			<g>
+				<path d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95
+					C8.035,178.85,0,186.885,0,196.8v314.103C0,520.816,8.035,528.854,17.95,528.854z"/>
+				<path d="M17.95,123.629h71.861c9.914,0,17.95-8.036,17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95
+					C8.035,23.916,0,31.952,0,41.866v63.813C0,115.593,8.035,123.629,17.95,123.629z"/>
+				<path d="M525.732,215.282c-10.098-13.292-24.988-24.223-44.676-32.791c-19.688-8.562-41.42-12.846-65.197-12.846
+					c-48.268,0-89.168,18.421-122.699,55.27c-6.672,7.332-11.523,5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192
+					c-9.915,0-17.95,8.035-17.95,17.95v314.103c0,9.914,8.036,17.951,17.95,17.951h71.861c9.915,0,17.95-8.037,17.95-17.951V401.666
+					c0-45.508,2.748-76.701,8.244-93.574c5.494-16.873,15.66-30.422,30.488-40.649c14.83-10.227,31.574-15.343,50.24-15.343
+					c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627
+					c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48
+					S535.836,228.581,525.732,215.282z"/>
+			</g>
+		</symbol>
+
+		<symbol id="tg_grey" viewBox="0 0 24 24">
+			<g>
+				<path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/>
+			</g>
+		</symbol>
+
+		<symbol id="vb_grey" viewBox="0 0 504 504">
+			<g>
+				<path d="M377.6,0H126C56.8,0,0,56.8,0,126.4V378c0,69.2,56.8,126,126,126h251.6c69.6,0,126.4-56.8,126.4-126.4V126.4
+					C504,56.8,447.2,0,377.6,0z M238.4,103.6c0.8-12.4,12.4-8,18.4-8.8c75.2,2.4,140,70,139.2,142.8c0,7.2,2.4,17.6-8.4,17.6
+					c-10.4,0-7.6-10.8-8.8-18c-10-77.2-46-113.6-124.4-125.6C248,110.8,238,112,238.4,103.6z M350.8,240.8c-12,1.6-9.6-8.8-10.8-15.6
+					c-8-47.2-24.8-64.4-73.2-74.8c-7.2-1.6-18.4-0.4-16.4-11.2c1.6-10.4,11.6-6.8,19.2-6c48.4,5.6,88,46.8,87.6,92
+					C356.4,230,359.6,239.2,350.8,240.8z M320.8,216c0,6.4-0.8,12.4-8,13.2c-5.2,0.8-8.4-3.6-9.2-8.8c-2-19.2-12.4-30.8-32.4-34
+					c-6-0.8-11.6-2.8-8.8-10.8c2-5.2,6.8-6,12-6C296,169.2,320.8,194.4,320.8,216z M396.8,363.6c-8.4,22.8-36.8,46-61.2,45.6
+					c-3.6-0.8-10.4-2-16.4-4.4C212,359.6,134,285.2,90,178.8c-14.8-35.6,0.8-66,38-78c6.8-2.4,13.2-2.4,20,0
+					c16,5.6,56.4,60.4,57.2,76.4c0.8,12.4-8,19.2-16.4,24.8c-16.4,10.8-16.4,24.4-9.2,40c15.6,34.4,42.4,58.4,77.2,73.6
+					c12.4,5.6,24.8,5.2,33.2-7.6c15.2-22.8,34-21.6,54.4-7.6c10.4,7.2,20.8,14,30.4,21.6C388,332.8,404.8,341.6,396.8,363.6z"/>
+			</g>
+		</symbol>
+
+		<symbol id="fe_tech" viewBox="0 0 176 176">
+			<g>
+				<path class="st1" d="M5.1,57.1h2.7v2.7h2.5v-2.7H13v8.3h-2.5v-2.7H7.8v2.7H5.1V57.1L5.1,57.1z M16.9,59.8h-2.5v-2.7h7.7v2.7h-2.5
+					v5.6h-2.7L16.9,59.8L16.9,59.8L16.9,59.8z M23.2,57.1h2.9l1.7,2.9l1.7-2.9h2.9v8.3h-2.7v-4.1l-1.9,2.9l0,0l-1.9-2.9v4.1h-2.7V57.1z
+					 M34.1,57.1h2.7v5.6h3.9v2.7h-6.8L34.1,57.1L34.1,57.1z"/>
+				<path class="st1" d="M1,69.2l4.1,44.7l17.8,5l18-5L45,69.2C44.9,69.2,1,69.2,1,69.2z M36.4,79.9l-0.2,2.7L36,83.7H22.8l0,0h-7.7
+					l0.6,5.6h7.2l0,0h12.8l-0.2,1.5l-1.4,14.5v1l-11.2,3.1l0,0l0,0l-11.2-3.1l-0.8-8.7h5.4l0,0l0.4,4.4l6.2,1.7l0,0l0,0l6.2-1.7
+					l0.6-7.2h-6.8l0,0H10.7L9.3,79.9l-0.2-1.5h13.7l0,0h13.7L36.4,79.9z"/>
+				<path class="st1" d="M77.8,62.7V60h3.9v-2.9h-6.8v8.3h6.8v-2.7C81.6,62.7,77.8,62.7,77.8,62.7z M88.6,60h2.7v-2.9h-6.8V60
+					c1,1,1.4,1.4,2.7,2.7c-0.8,0-2.7,0-2.7,0v2.7h6.8v-2.7L88.6,60L88.6,60z M98.2,60h2.7v-2.9h-6.8V60c1,1,1.4,1.4,2.7,2.7
+					c-0.8,0-2.7,0-2.7,0v2.7h6.8v-2.7L98.2,60L98.2,60z"/>
+				<path class="st1" d="M66,69.2l4.1,44.9l18,4.8l18-4.8l4.1-44.9H66z M101.7,78.3l-0.6,5.4l0,0L88,89.4l0,0l0,0h12.8l-1.5,16.8
+					L88,109.5l0,0l0,0l-11.2-3.3L76,97.7l0,0l0,0h5.6l0.4,4.4l6,1.5l0,0l0,0l6.2-1.7l0.4-7.2H88l0,0H75.6l0,0l-0.4-5.2L88,84.1l0,0
+					l0.8-0.4H88H74.7l-0.6-5.4H88L101.7,78.3L101.7,78.3L101.7,78.3z"/>
+				<path class="st1" d="M148.3,59.8v2.7h-1.7v-1h-2.1v3.9h6.8v-8.3h-2.9v2.7H148.3z M158.2,60h2.7v-2.9h-6.8V60c1,1,1.4,1.4,2.7,2.7
+					c-0.8,0-2.7,0-2.7,0v2.7h6.8v-2.7L158.2,60L158.2,60z"/>
+				<path class="st1" d="M131.1,68.9l4.1,45l17.8,5l18-5l4.1-45H131.1z M151.4,108.1l-13-3.5v-5.2l8.5,2.3v-23h4.4
+					C151.4,78.7,151.4,108.1,151.4,108.1z M168.4,83.7h-9.3v7.7l8.7-1l-1.2,14.3l-11.8,3.1v-5.2l8.5-2.3l0.2-4.3l-8.5,1.5l-0.2-19.1
+					H169L168.4,83.7z"/>
+			</g>
+		</symbol>
+
+	</svg>
+
+	<div id="wrapper">
+
+		<header>
+			<div class="layout">
+				<div class="header__inner">
+					<div class="user">
+						<a class="user__avatar" href="#">
+							<img src="./images/avatar.png" alt="avatar">
+						</a>
+						<h1>Yelizov Gleb</h1>
+						<div class="user__content">
+							<p>Gleb</p>
+							<p>Yelizov</p>
+							<p>FE Developer</p>
+						</div>
+					</div>	<!-- user -->
+						<nav>
+							<ul>
+								<li>
+									<a class="nav_link" href="#">about me</a>
+								</li>
+								<li>
+									<a class="nav_link" href="#">skills</a>
+								</li>
+								<li>
+									<a class="nav_link" href="#">portfolio</a>
+								</li>
+								<li>
+									<a class="nav_link" href="#">contact</a>
+								</li>
+								<li>
+									<a class="nav_link nav_lastlink" href="#">hire me</a>
+								</li>
+							</ul>
+						</nav>
+				</div>	<!-- header__inner -->
+			</div>	<!-- layout -->
+		</header>
+
+		<main>
+			<div id="content">
+
+<!-- INTRO -->
+
+				<section class="intro">
+					<div class="layout">
+						<div class="intro__inner">
+							<h4>Hello, I’m</h4>
+							<h3>Gleb Yelizov</h3>
+							<p>Front-End Developer</p>
+							<div class="intro__socials">
+								<a class="social_link" href="#" target="_blank">
+									<img src="./images/icon_fb.png" alt="icon_fb">
+								</a>
+								<a class="social_link" href="#" target="_blank">
+									<img src="./images/icon_ig.png" alt="icon_ig">
+								</a>
+								<a class="social_link" href="#" target="_blank">
+									<img src="./images/icon_in.png" alt="icon_in">
+								</a>
+								<a class="social_link" href="#" target="_blank">
+									<img src="./images/icon_tg.png" alt="icon_tg">
+								</a>
+								<a class="social_link" href="#" target="_blank">
+									<img src="./images/icon_vb.png" alt="icon_vb">
+								</a>
+							</div>	<!-- intro__socials -->
+							<div class="intro__buttons">
+								<a class="button intro__hireme"href="#">hire me</a>
+								<a class="button intro__resume"href="#">see my resume</a>
+							</div>
+							<img class="intro__photo"src="./images/photo_inner.png" alt="photo_inner">
+						</div>	<!-- intro__inner -->
+					</div>	<!-- layout -->
+				</section>
+
+<!-- ABOUT me -->
+
+				<section class="aboutme">
+					<div class="layout">
+						<div class="aboutme__inner">
+							<div class="aboutme__photo">
+								<img class="aboutme__img" src="./images/photo_aboutme.png" alt="photo_aboutme">
+							</div>
+							<div class="aboutme__content">
+								<h3>ABOUT ME</h3>
+								<h4>WHO AM I</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<div class="aboutme__buttons">
+									<a class="button intro__hireme"href="#">hire me</a>
+									<a class="button intro__resume"href="#">see my resume</a>
+								</div>
+							</div>
+						</div>	<!-- aboutme__inner -->
+					</div>	<!-- layout -->
+				</section>
+
+<!-- Reviews -->
+
+				<section class="reviews">
+					<div class="layout">
+						<div class="reviews__content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+						</div>
+						<div class="reviews__autor">
+							<img class="reviews__avatar"src="./images/avatar_review.png" alt="reviews__avatar">
+							<p class="reviews__name">Yelizov G.</p>
+							<p class="reviews__company">Some company</p>
+							<div class="reviews__rating">
+								<svg class="rating__star">
+									<use xlink:href="#star_filled"></use>
+								</svg>
+								<svg class="rating__star">
+									<use xlink:href="#star_filled"></use>
+								</svg>
+								<svg class="rating__star">
+									<use xlink:href="#star_filled"></use>
+								</svg>
+								<svg class="rating__star">
+									<use xlink:href="#star_filled"></use>
+								</svg>
+								<svg class="rating__star">
+									<use xlink:href="#star_half"></use>
+								</svg>
+							</div>	<!-- reviews__rating -->
+						</div>	<!-- reviews__autor -->
+					</div>	<!-- layout -->
+				</section>
+
+<!-- Skills -->
+
+				<section class="skills">
+					<div class="layout">
+						<h3>skills</h3>
+						<h4>What Skills do I Use?</h4>
+
+						<div class="skills__content">
+
+							<div class="skills__item">
+								<div class="skill-picture">
+									<img src="images\avocode-og-default.png" alt="tools-img">
+								</div>
+								<h5>Tools</h5>
+								<ul>
+									<li>
+										<h6>Basic:</h6>
+										<ul>
+											<li class="skill-with-befor">Git version control system</li>
+										</ul>
+									</li>
+									<li>
+										<h6>Mark-up:</h6>
+										<ul>
+											<li class="skill-with-befor">Adobe Photoshop graphic editor</li>
+											<li class="skill-with-befor">Avocode converter app</li>
+											<li class="skill-with-befor">Figma graphic online editor app</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+
+							<div class="skills__item">
+								<div class="skill-picture">
+									<img src="images\html+css.png" alt="tools-img">
+								</div>
+								<h5>Mark-up</h5>
+								<ul>
+									<li class="skill-with-befor">HTML5</li>
+									<li class="skill-with-befor">CSS (including CSS3)</li>
+									<li class="skill-with-befor">Sass-scss preprocessor</li>
+									<li class="skill-with-befor">Flex-box technology</li>
+									<li class="skill-with-befor">Grid technology</li>
+									<li class="skill-with-befor">Bootstrap framework</li>
+									<li class="skill-with-befor">Building responsive sites</li>
+									<li class="skill-with-befor">Building crossbrowser sites</li>
+									<li class="skill-with-befor">SVG praphic</li>
+								</ul>
+							</div>
+							<div class="skills__item">
+								<h5>Javascript</h5>
+								<ul class="js__content">
+									<li class="skill-with-befor">Vanilla Javascript</li>
+									<li class="skill-with-befor">jQuery library</li>
+								</ul>
+							</div>
+						</div>	<!-- skills__content -->
+					</div>
+
+				</section>
+
+<!-- Portfolio -->
+
+				<section class="portfolio">
+
+				</section>
+
+<!-- Contact -->
+
+				<section class="contact">
+
+				</section>
+
+			</div>
+		</main>
+
+		<footer>
+			<div class="layout">
+				<div class="footer__inner">
+					<div class="footer__credits">
+						<div class="footer__copyright">
+							<p>© 2018 UI43 - Free Templates</p>
+						</div>
+						<div class="footer__socials">
+							<a href="#" class="footer__soc_link" target="_blank">
+								<svg class="footer__soc_svg">
+									<use xlink:href="#fb_grey"></use>
+								</svg>
+							</a>
+							<a href="#" class="footer__soc_link" target="_blank">
+								<svg class="footer__soc_svg">
+									<use xlink:href="#ig_grey"></use>
+								</svg>
+							</a>
+							<a href="#" class="footer__soc_link" target="_blank">
+								<svg class="footer__soc_svg">
+									<use xlink:href="#in_grey"></use>
+								</svg>
+							</a>
+							<a href="#" class="footer__soc_link" target="_blank">
+								<svg class="footer__soc_svg">
+									<use xlink:href="#tg_grey"></use>
+								</svg>
+							</a>
+							<a href="#" class="footer__soc_link" target="_blank">
+								<svg class="footer__soc_svg">
+									<use xlink:href="#vb_grey"></use>
+								</svg>
+							</a>
+						</div> <!-- footer__socials -->
+					</div> <!-- footer__credits -->
+					<div class="footer__nav">
+						<a href="#" class="footer__nav-link">about me</a>
+						<a href="#" class="footer__nav-link">skills</a>
+						<a href="#" class="footer__nav-link">portfolio</a>
+						<a href="#" class="footer__nav-link">contacts</a>
+						<a href="#" class="footer__nav-link footer__nav-last-link">hire me</a>
+					</div> <!-- footer__nav -->
+				</div> <!-- footer__inner -->
+			</div> <!-- layout -->
+		</footer>
+
+	</div>
+</body>
+</html>
