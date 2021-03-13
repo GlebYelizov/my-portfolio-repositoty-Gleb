@@ -459,6 +459,9 @@ section.skills .skills__content {
   align-items: center;
   flex-wrap: wrap;
   align-items: flex-start;
+  padding-top: 20px;
+  position: relative;
+  z-index: 3;
 }
 section.skills .skills__content .skills__item {
   width: 33.3333%;
@@ -478,7 +481,7 @@ section.skills .skills__content .skills__item h5 {
   margin-top: 8px;
   margin-bottom: 8px;
   font-weight: 700;
-  font-zize: 18px;
+  font-size: 16px;
   color: #2b2a2c;
   text-transform: uppercase;
   text-align: center;
@@ -492,7 +495,7 @@ section.skills .skills__content .skills__item ul li {
   font-weight: 300;
   font-size: 14px;
   color: #717072;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 section.skills .skills__content .skills__item ul .skill-with-befor:before {
   content: "";
@@ -510,7 +513,7 @@ section.skills .skills__content .skills__item ul h6 {
   margin-top: 8px;
   margin-bottom: 8px;
   font-weight: 600;
-  font-zize: 12px;
+  font-size: 15px;
   color: #2b2a2c;
 }
 section.skills .skills__content .skills__item ul h6:before {

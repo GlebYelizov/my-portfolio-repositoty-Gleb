@@ -24,7 +24,10 @@ section.skills {
 	.skills__content {
 		@include flex_row_bw_center;
 		align-items: flex-start;
-
+		// border-top: 1px solid $grey;
+		padding-top: 20px;
+		position: relative;
+		z-index: 3;
 		.skills__item {
 			width: 33.3333%;
 			.skill-picture {
@@ -43,7 +46,7 @@ section.skills {
 				margin-top: 8px;
 				margin-bottom: 8px;
 				font-weight: 700;
-				font-zize: 18px;
+				font-size: 16px;
 				color: $black;
 				text-transform: uppercase;
 				text-align: center;
@@ -57,7 +60,7 @@ section.skills {
 				font-weight: 300;
 				font-size: 14px;
 				color: $grey;
-				line-height: 1.6;
+				line-height: 1.8;
 				}
 				.skill-with-befor:before {
 					content: "";
@@ -75,7 +78,7 @@ section.skills {
 					margin-top: 8px;
 					margin-bottom: 8px;
 					font-weight: 600;
-					font-zize: 12px;
+					font-size: 15px;
 					color: $black;
 				}
 				h6:before {
@@ -100,5 +103,5 @@ section.skills {
 
 			}
 		}
-	}
+	}	
 }
