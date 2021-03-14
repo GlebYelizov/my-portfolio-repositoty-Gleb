@@ -458,24 +458,30 @@ section.skills .skills__content {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;
   padding-top: 20px;
   position: relative;
   z-index: 3;
 }
 section.skills .skills__content .skills__item {
-  width: 33.3333%;
+  width: 32%;
+  border: 0px #717072 solid;
+  border-radius: 15px;
+  background-color: #f4f4f4;
+  padding-bottom: 8px;
+  position: relative;
 }
 section.skills .skills__content .skills__item .skill-picture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 12px 48px 12px 48px;
+  position: absolute;
+  top: -30px;
+  left: 15px;
+  z-index: 3;
+  height: 60px;
+  width: auto;
 }
-section.skills .skills__content .skills__item .skill-picture img {
-  width: 50%;
-  margin: 0 auto;
+section.skills .skills__content .skills__item .skill-picture .skill-icon {
+  height: 100%;
+  width: auto;
 }
 section.skills .skills__content .skills__item h5 {
   margin-top: 8px;
@@ -529,6 +535,10 @@ section.skills .skills__content .skills__item ul h6:before {
 section.skills .skills__content .skills__item ul ul {
   padding-left: 5%;
 }
+section.skills .skills__content .skills__item ul ul li {
+  position: relative;
+}
+
 section.reviews {
   display: block;
   position: relative;
