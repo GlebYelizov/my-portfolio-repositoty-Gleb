@@ -14,7 +14,7 @@ section.skills {
 	}
 	h4 {
 		display: block;
-		margin-bottom: 12px;
+		margin-bottom: 32px;
 		font-size: 18px;
 		font-weight: 200;
 		color: $grey;
@@ -28,12 +28,15 @@ section.skills {
 		position: relative;
 		z-index: 3;
 		.skills__item {
-			width: 32%;
+			width: 31.5%;
 			border: 0px $grey solid;
 			border-radius: 15px;
 			background-color: #f4f4f4;
 			padding-bottom: 8px;
-			position: relative;		
+			position: relative;
+
+			-webkit-box-shadow: 0 0 4px rgba(0,0,0,25%);
+			box-shadow: 0 0 4px rgba(0,0,0,25%);	
 			.skill-picture {
 				position: absolute;
 				top: -30px;

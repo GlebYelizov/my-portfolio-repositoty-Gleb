@@ -1,0 +1,96 @@
+section.works {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    h3 {
+		display: block;
+		margin-bottom: 12px;
+		font-size: 45px;
+		font-weight: 700;
+		color: $black;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	h4 {
+		display: block;
+		margin-bottom: 32px;
+		font-size: 18px;
+		font-weight: 200;
+		color: $grey;
+		text-transform: capitalize;
+		text-align: center;
+	}
+    .works_nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        .works_nav_link {
+            margin: 0 12px;
+            font-weight: 400;
+            font-size: 12px;
+            color: $grey;
+        }
+        .works_nav_link:hover {
+            text-decoration: underline;
+        }
+    }
+    .portfolio {
+        @include flex_row_bw_center;
+        margin: 0 -15px;
+
+        .portfolio_item {            
+            width: 33.333%;
+            padding: 15px;            
+            .portfolio_item_inner {
+                display: block;
+                overflow: hidden;
+                border-radius: 10px;
+                -webkit-box-shadow: 0 0 4px rgba(0,0,0,25%);
+                box-shadow: 0 0 4px rgba(0,0,0,25%);
+                @include transition_all;
+                cursor: pointer;
+                
+                &:hover {
+                    -webkit-box-shadow: 0 0 20px rgba(0,0,0,25%);
+                    box-shadow: 0 0 20px rgba(0,0,0,25%);
+                    @include transition_all;
+                }
+                
+                
+                .work_img {
+                    min-width: 100%;
+                    height: auto;
+                    margin-bottom: 4px;                   
+                }
+                .portfolio_content {
+                    display: block;
+                    padding: 12px;
+
+                    .work_category {
+                        font-weight: 400;
+                        font-size: 12px;
+                        color: $black;
+                        text-transform: uppercase;
+                        margin-bottom: 12px;
+                    }
+                    .work_inf {
+                        display: flex;
+                        justify-content: space-between;                        
+                       .work_title {
+                        font-weight: 700;
+                        font-size: 16px;
+                        color: $black;
+                        text-transform: uppercase;
+                       }
+                       .work_date {
+                        font-weight: 700;
+                        font-size: 16px;
+                        color: $black;
+                        text-transform: uppercase;
+                       }
+                    }
+                }
+            }
+        }
+    }
+}
