@@ -2,18 +2,30 @@ section.aboutme {
 	display: block;
 	overflow: hidden;
 	.aboutme__inner {
-		padding: 126px 0;
+		padding: 100px 0;
 		@include flex_row_bw_center;
 		.aboutme__photo {
 			width: 50%;
 			display: flex;
 			justify-content: flex-start;
+			align-items: flex-end;
 			position: relative;
 			z-index: 1;
 			.aboutme__img {
 				position: relative;
 				z-index: 3;
 				}
+
+				@media (max-width: 1350px) {
+					
+				}
+				@media (max-width: 767px) {
+					display: none;
+				}	
+				@media (max-width: 479px) {
+					
+				}
+
 			}
 			.aboutme__photo:after {
 				content: "";
@@ -24,14 +36,23 @@ section.aboutme {
 				bottom: 0;
 				z-index: 2;
 				background-color: $light-grey;
+
+				@media (max-width: 1350px) {
+					width: 356px;
+				}
+				@media (max-width: 767px) {
+					
+				}	
+				@media (max-width: 479px) {
+					
+				}
+				
 		}
 		.aboutme__content {
 			width: 50%;
 			padding: 0 70px 0 20px;
 			h3 {
-				font-size: 45px;
-				font-weight: 700;
-				color: $black;
+				@include heading;
 				line-height: 1.1;
 			}
 			h4 {
@@ -40,6 +61,16 @@ section.aboutme {
 				font-weight: 700;
 				color: $light-grey;
 				margin-bottom: 30px;
+
+				@media (max-width: 1350px) {
+					font-size: 52px;
+				}
+				@media (max-width: 767px) {
+					
+				}	
+				@media (max-width: 479px) {
+					
+				}
 			}
 			p {
 				font-size: 12px;
@@ -52,7 +83,17 @@ section.aboutme {
 				display: block;
 				.button {
 					@include button_big;
+
+					@media (max-width: 1350px) {
+						font-size: 0.6rem;
 					}
+					@media (max-width: 767px) {
+						
+					}	
+					@media (max-width: 479px) {
+						
+					}
+				}
 				.intro__hireme {
 					border-color: $black;
 					color: $white;
@@ -77,6 +118,28 @@ section.aboutme {
 					}
 				}
 			}
+
+			@media (max-width: 1350px) {
+					
+			}
+			@media (max-width: 767px) {
+				width: 100%;
+				padding: 0;
+				text-align: right;
+			}	
+			@media (max-width: 479px) {
+				
+			}
+
+		}
+		@media (max-width: 1350px) {
+			padding: 92px 0;
+		}
+		@media (max-width: 767px) {
+			padding: 60px 0;
+		}	
+		@media (max-width: 479px) {
+			
 		}
 	}
 }

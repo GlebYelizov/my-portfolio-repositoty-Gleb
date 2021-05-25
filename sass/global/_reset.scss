@@ -31,6 +31,9 @@ time, mark, audio, video {
 *:focus {outline: none;}
 body {
     line-height:1;
+    &.no-scroll{
+        overflow: hidden;
+    }
 }
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {

@@ -5,10 +5,7 @@ section.works {
     h3 {
 		display: block;
 		margin-bottom: 12px;
-		font-size: 45px;
-		font-weight: 700;
-		color: $black;
-		text-transform: uppercase;
+		@include heading;
 		text-align: center;
 	}
 	h4 {
@@ -36,6 +33,7 @@ section.works {
     }
     .portfolio {
         @include flex_row_bw_center;
+        justify-content: flex-start;
         margin: 0 -15px;
 
         .portfolio_item {            
@@ -81,16 +79,43 @@ section.works {
                         font-size: 16px;
                         color: $black;
                         text-transform: uppercase;
+
+                        @media (max-width: 1350px) {
+                            font-size: 14px;
+                        }
+
                        }
                        .work_date {
                         font-weight: 700;
                         font-size: 16px;
                         color: $black;
                         text-transform: uppercase;
+
+                        @media (max-width: 1350px) {
+                            font-size: 14px;
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 12px;
+                        }	
+                        @media (max-width: 479px) {
+                            font-size: 12px;
+                        }
+
                        }
                     }
                 }
             }
+            
+            @media (max-width: 1350px) {
+                
+            }
+            @media (max-width: 767px) {
+                width: 100%;
+            }	
+            @media (max-width: 479px) {
+                width: 100%;
+            }
+
         }
     }
 }

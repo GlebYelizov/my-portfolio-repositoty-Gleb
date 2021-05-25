@@ -39,13 +39,44 @@ transition: all 0.2s linear;
 	padding: 1.375em 3em;
 	border: 2px solid;
 	border-radius: 40px;
+
+  @media (max-width: 1350px) {
+		font-size: 0.85rem;
+	}
+	@media (max-width: 767px) {		
+    font-size: 0.7rem;
+	}	
+	@media (max-width: 479px) {
+		font-size: 0.7rem;
+    padding: 1em 2em;
+	}
+
 }
 
 @mixin flex_row_bw_center {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-end;
 	flex-wrap: wrap;
+}
+
+
+@mixin heading {
+  font-size: 45px;
+	font-weight: 700;
+	color: $black;
+	text-transform: uppercase;
+
+  @media (max-width: 1350px) {
+		font-size: 40px;
+	}
+	@media (max-width: 767px) {
+		font-size: 35px;
+	}	
+	@media (max-width: 479px) {
+		font-size: 30x;
+	}
+
 }
 
 

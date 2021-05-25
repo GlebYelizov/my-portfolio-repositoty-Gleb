@@ -4,9 +4,21 @@ footer {
 	margin:100px 0 0;
 	padding:0 0 0;
 	background-color: $black;
+
+	@media (max-width: 1350px) {
+		
+	}
+	@media (max-width: 767px) {
+		margin-top: 25px;
+	}	
+	@media (max-width: 479px) {
+		
+	}
+
 	.footer__inner {
 		height: 100%;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
 		padding-top: 12px;
@@ -15,6 +27,19 @@ footer {
 			height: 100%;
 			display: flex;
 			align-items: center;
+
+			@media (max-width: 1350px) {
+				width: 100%;
+				justify-content: center;
+				margin-bottom: 14px;
+			}
+			@media (max-width: 767px) {
+				flex-direction: column;
+			}	
+			@media (max-width: 479px) {
+				
+			}
+
 			.footer__copyright {
 				padding-right: 18px;
 				border-right: 1px $grey solid;
@@ -24,6 +49,18 @@ footer {
 					color: $grey;
 					line-height: 1.6;
 				}
+
+				@media (max-width: 1350px) {
+					padding-right: 0px;
+					border-right: none;
+				}
+				@media (max-width: 767px) {
+					margin-bottom: 6px;
+				}	
+				@media (max-width: 479px) {
+					
+				}	
+
 			}
 			.footer__socials {
 				display: flex;
@@ -35,6 +72,18 @@ footer {
 					height: 30px;
 					width: 30px;
 					margin-left: 8px;
+
+					@media (max-width: 1350px) {
+						margin-left: 6px;
+						margin-right: 6px;
+					}
+					@media (max-width: 767px) {
+						
+					}	
+					@media (max-width: 479px) {
+						
+					}
+
 					.footer__soc_svg {
 						fill: $grey;
 						height: 18px;
@@ -56,6 +105,18 @@ footer {
 			justify-content: space-between;
 			align-items: center;
 
+			@media (max-width: 1350px) {
+				width: 100%;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			@media (max-width: 767px) {
+				
+			}	
+			@media (max-width: 479px) {
+				
+			}
+
 			.footer__nav-link {
 				position: relative;
 				z-index: 1;
@@ -67,6 +128,18 @@ footer {
 				color: $grey;
 				text-transform: capitalize;
 				@include transition_color;
+
+				@media (max-width: 1350px) {
+					margin-left: 6px;
+					margin-right: 6px;
+				}
+				@media (max-width: 767px) {
+					
+				}	
+				@media (max-width: 479px) {
+					margin-bottom: 8px;
+				}
+
 				&:after {
 					content: "";
 					width: 0;
@@ -82,7 +155,8 @@ footer {
 				.footer__nav-link:hover:not(.footer__nav-last-link):after {
 					width: 100%;
 					@include transition_width;
-			}
+				}			
+
 			.footer__nav-link:hover {
 				color: $light-grey;
 				@include transition_color;

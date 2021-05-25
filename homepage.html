@@ -8,8 +8,7 @@
 	<link rel="stylesheet" href="sass/fonts.css" type="text/css"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,200;1,400&display=swap" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>		
 	<title>YelizovGleb</title>
 </head>
 
@@ -103,6 +102,10 @@
 
 	<div id="wrapper">
 
+		<div class="arrow-gototop">
+			<img src="./images/arrow-gototop.svg" alt="gototop">
+		</div>
+
 		<header>
 			<div class="layout">
 				<div class="header__inner">
@@ -117,25 +120,27 @@
 							<p>FE Developer</p>
 						</div>
 					</div>	<!-- user -->
-						<nav>
+						<nav id="nav">
 							<ul>
 								<li>
-									<a class="nav_link" href="#">about me</a>
+									<a class="link__about__me nav_link" href="#">about me</a>
 								</li>
 								<li>
-									<a class="nav_link" href="#">skills</a>
+									<a class="link__skills nav_link" href="#">skills</a>
 								</li>
 								<li>
-									<a class="nav_link" href="#">portfolio</a>
-								</li>
+									<a class="link__portfolio nav_link" href="#">portfolio</a>
+								</li>								
 								<li>
-									<a class="nav_link" href="#">contact</a>
-								</li>
-								<li>
-									<a class="nav_link nav_lastlink" href="#">hire me</a>
+									<a class="nav_link nav_lastlink" href="#" data-modal="#modal_hire_me">hire me</a>
 								</li>
 							</ul>
 						</nav>
+
+						<button class="burger" type="button" id="navToggle" > 
+							<img class="burger__icon" src="images/burger.svg" alt="burger">
+						</button>
+
 				</div>	<!-- header__inner -->
 			</div>	<!-- layout -->
 		</header>
@@ -161,16 +166,16 @@
 								<a class="social_link" href="#" target="_blank">
 									<img src="./images/icon_in.png" alt="icon_in">
 								</a>
-								<a class="social_link" href="#" target="_blank">
+								<a class="social_link" href="tg://resolve?domain=@glebyelizov" target="_blank">
 									<img src="./images/icon_tg.png" alt="icon_tg">
 								</a>
-								<a class="social_link" href="#" target="_blank">
+								<a class="social_link" href="viber://add?number=380958187475" target="_blank">
 									<img src="./images/icon_vb.png" alt="icon_vb">
 								</a>
 							</div>	<!-- intro__socials -->
 							<div class="intro__buttons">
-								<a class="button intro__hireme"href="#">hire me</a>
-								<a class="button intro__resume"href="#">see my resume</a>
+								<a class="button intro__hireme"href="#" data-modal="#modal_hire_me">hire me</a>
+								<a class="button intro__resume"href="#" data-modal="#modal_resume">see my resume</a>
 							</div>
 							<img class="intro__photo"src="./images/photo_inner.png" alt="photo_inner">
 						</div>	<!-- intro__inner -->
@@ -179,7 +184,7 @@
 
 <!-- ABOUT me -->
 
-				<section class="aboutme">
+				<section class="aboutme link__about__me">
 					<div class="layout">
 						<div class="aboutme__inner">
 							<div class="aboutme__photo">
@@ -188,11 +193,10 @@
 							<div class="aboutme__content">
 								<h3>ABOUT ME</h3>
 								<h4>WHO AM I</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>								
 								<div class="aboutme__buttons">
-									<a class="button intro__hireme"href="#">hire me</a>
-									<a class="button intro__resume"href="#">see my resume</a>
+									<a class="button intro__hireme"href="#" data-modal="#modal_hire_me">hire me</a>
+									<a class="button intro__resume"href="#" data-modal="#modal_resume">see my resume</a>
 								</div>
 							</div>
 						</div>	<!-- aboutme__inner -->
@@ -233,7 +237,7 @@
 
 <!-- Skills -->
 
-				<section class="skills">
+				<section class="skills link__skills">
 					<div class="layout">
 						<h3>skills</h3>
 						<h4>What Skills do I Use?</h4>
@@ -297,25 +301,25 @@
 
 <!-- Works -->
 
-				<section class="works">
+				<section class="works link__portfolio">
 					<div class="layout">
 
 						<h3>portfolio</h3>
 						<h4>Look at my portfolio</h4>
 
 						<div class="works_nav">
-							<a href="#" class="works_nav_link">All</a>
-							<a href="#" class="works_nav_link">Portpholio-sites</a>
-							<a href="#" class="works_nav_link">Business-sites</a>
+							<a href="#" class="works_nav_link" data-filter="all">All</a>
+							<a href="#" class="works_nav_link" data-filter="portfolio-sites">Portpholio-sites</a>
+							<a href="#" class="works_nav_link" data-filter="business-sites">Business-sites</a>
 						</div> <!-- works__nav -->
 
 						<div class="portfolio">
 
-							<div class="portfolio_item">
-								<div class="portfolio_item_inner">
-									<img src="https://placehold.it/370x300" alt="" class="work_img">
+							<div class="portfolio_item" data-cat="portfolio-sites">
+								<div class="portfolio_item_inner" data-modal="#modal_project_1">
+									<img src="https://via.placeholder.com/370x300" alt="" class="work_img">
 									<div class="portfolio_content">
-										<p class="work_category">business</p>
+										<p class="work_category">portfolio</p>
 										<div class="work_inf">
 											<p class="work_title">Helen accounting</p>
 											<p class="work_date">2020</p>
@@ -324,9 +328,9 @@
 								</div>
 							</div> <!-- portfolio_item -->
 
-							<div class="portfolio_item">
-								<div class="portfolio_item_inner">
-									<img src="https://placehold.it/370x300" alt="" class="work_img">
+							<div class="portfolio_item" data-cat="portfolio-sites">
+								<div class="portfolio_item_inner" data-modal="#modal_project_2">
+									<img src="https://via.placeholder.com/370x300" alt="" class="work_img">
 									<div class="portfolio_content">
 										<p class="work_category">portfolio</p>
 										<div class="work_inf">
@@ -337,9 +341,9 @@
 								</div>
 							</div> <!-- portfolio_item -->
 
-							<div class="portfolio_item">
-								<div class="portfolio_item_inner">
-									<img src="https://placehold.it/370x300" alt="" class="work_img">
+							<div class="portfolio_item" data-cat="business-sites">
+								<div class="portfolio_item_inner" data-modal="#modal_project_3">
+									<img src="https://via.placeholder.com/370x300" alt="" class="work_img">
 									<div class="portfolio_content">
 										<p class="work_category">category</p>
 										<div class="work_inf">
@@ -354,15 +358,6 @@
 
 					</div> <!-- layout -->
 				</section>
-
-<!-- Contact -->
-
-				<section class="contact">
-
-				</section>
-
-			</div>
-		</main>
 
 		<footer>
 			<div class="layout">
@@ -400,16 +395,314 @@
 						</div> <!-- footer__socials -->
 					</div> <!-- footer__credits -->
 					<div class="footer__nav">
-						<a href="#" class="footer__nav-link">about me</a>
-						<a href="#" class="footer__nav-link">skills</a>
-						<a href="#" class="footer__nav-link">portfolio</a>
-						<a href="#" class="footer__nav-link">contacts</a>
-						<a href="#" class="footer__nav-link footer__nav-last-link">hire me</a>
+						<a href="#" class="link__about__me footer__nav-link">about me</a>
+						<a href="#" class="link__skills footer__nav-link">skills</a>
+						<a href="#" class="link__portfolio footer__nav-link">portfolio</a>						
+						<a href="#" class="footer__nav-link footer__nav-last-link" data-modal="#modal_hire_me">hire me</a>
 					</div> <!-- footer__nav -->
 				</div> <!-- footer__inner -->
 			</div> <!-- layout -->
 		</footer>
 
+<!-- Modal-works project_1-->
+
+		<div class="modal" id="modal_project_1">
+			<div class="modal__dialog">
+
+				<button class="modal__close" type="button" data-close>
+					<img src="images\remove-button.svg" alt="Close">
+				</button>
+
+				<div class="modal-work">
+					<div class="modal-work__preview">
+						<img class="modal-work__photo" 
+						src="https://via.placeholder.com/790x780" alt="work__photo">
+					</div>
+					<div class="modal-work__content">
+
+						<div class="modal-work__header">
+							<h3 class="modal-work__title">Project title</h3>
+							<div class="modal-work__info">
+								category <span>|</span> 2020
+							</div>	
+						</div>
+
+						<div class="modal-work__client">
+							<p>Client</p>
+							<p>Elena Pastars</p>
+						</div>
+						
+						<div class="modal-work__text">
+							<p>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus ullam praesentium sunt dolores nulla, nihil natus adipisci sint laudantium reiciendis quae ut optio quaerat voluptates, reprehenderit dolorum deleniti tenetur nemo.
+							</p>
+							<p>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus ullam praesentium sunt dolores nulla, nihil natus adipisci sint laudantium reiciendis quae ut optio quaerat voluptates, reprehenderit dolorum deleniti tenetur nemo.
+							</p>
+						</div>
+
+						<!-- <div class="modal-work__footer">
+							<button class="modal-work__btn modal-work__btn--prev" type="button">
+								<img src="images/back.svg" height="12" alt="back">
+								Previous
+							</button>
+							<button class="modal-work__btn modal-work__btn--next" type="button">
+								Next
+								<img src="images/next.svg" height="12" alt="next">								
+							</button>
+						</div> -->
+
+					</div><!--/modal__content-->
+
+				</div><!--/modal__work-->
+
+			</div><!--/modal__dialog-->
+		</div><!--/modal-->
+
+<!-- Modal-works project_2-->
+
+		<div class="modal" id="modal_project_2">
+			<div class="modal__dialog">
+
+				<button class="modal__close" type="button" data-close>
+					<img src="images\remove-button.svg" alt="Close">
+				</button>
+
+				<div class="modal-work">
+					<div class="modal-work__preview">
+						<img class="modal-work__photo" 
+						src="https://via.placeholder.com/790x780" alt="work__photo">
+					</div>
+					<div class="modal-work__content">
+
+						<div class="modal-work__header">
+							<h3 class="modal-work__title">Project title</h3>
+							<div class="modal-work__info">
+								category <span>|</span> 2020
+							</div>	
+						</div>
+
+						<div class="modal-work__client">
+							<p>Client</p>
+							<p>Elena Pastars</p>
+						</div>
+						
+						<div class="modal-work__text">
+							<p>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus ullam praesentium sunt dolores nulla, nihil natus adipisci sint laudantium reiciendis quae ut optio quaerat voluptates, reprehenderit dolorum deleniti tenetur nemo.
+							</p>
+							<p>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus ullam praesentium sunt dolores nulla, nihil natus adipisci sint laudantium reiciendis quae ut optio quaerat voluptates, reprehenderit dolorum deleniti tenetur nemo.
+							</p>
+						</div>
+
+						<!-- <div class="modal-work__footer">
+							<button class="modal-work__btn modal-work__btn--prev" type="button">
+								<img src="images/back.svg" height="12" alt="back">
+								Previous
+							</button>
+							<button class="modal-work__btn modal-work__btn--next" type="button">
+								Next
+								<img src="images/next.svg" height="12" alt="next">								
+							</button>
+						</div> -->
+
+					</div><!--/modal__content-->
+
+				</div><!--/modal__work-->
+
+			</div><!--/modal__dialog-->
+		</div><!--/modal-->
+
+<!-- Modal-works project_3-->
+
+		<div class="modal" id="modal_project_3">
+			<div class="modal__dialog">
+
+				<button class="modal__close" type="button" data-close>
+					<img src="images\remove-button.svg" alt="Close">
+				</button>
+
+				<div class="modal-work">
+					<div class="modal-work__preview">
+						<img class="modal-work__photo" 
+						src="https://via.placeholder.com/790x780" alt="work__photo">
+					</div>
+					<div class="modal-work__content">
+
+						<div class="modal-work__header">
+							<h3 class="modal-work__title">Project title</h3>
+							<div class="modal-work__info">
+								category <span>|</span> 2020
+							</div>	
+						</div>
+
+						<div class="modal-work__client">
+							<p>Client</p>
+							<p>Elena Pastars</p>
+						</div>
+						
+						<div class="modal-work__text">
+							<p>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus ullam praesentium sunt dolores nulla, nihil natus adipisci sint laudantium reiciendis quae ut optio quaerat voluptates, reprehenderit dolorum deleniti tenetur nemo.
+							</p>
+							<p>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus ullam praesentium sunt dolores nulla, nihil natus adipisci sint laudantium reiciendis quae ut optio quaerat voluptates, reprehenderit dolorum deleniti tenetur nemo.
+							</p>
+						</div>
+
+						<!-- <div class="modal-work__footer">
+							<button class="modal-work__btn modal-work__btn--prev" type="button">
+								<img src="images/back.svg" height="12" alt="back">
+								Previous
+							</button>
+							<button class="modal-work__btn modal-work__btn--next" type="button">
+								Next
+								<img src="images/next.svg" height="12" alt="next">								
+							</button>
+						</div> -->
+
+					</div><!--/modal__content-->
+
+				</div><!--/modal__work-->
+
+			</div><!--/modal__dialog-->
+		</div><!--/modal-->
+
+<!-- Modal-Resume -->
+
+		<div class="modal" id="modal_resume">
+			<div class="modal__dialog">
+
+				<button class="modal__close" type="button" data-close>
+					<img src="images\remove-button.svg" alt="Close">
+				</button>
+				
+				<div class="modal-content">
+					<h3 class="modal__title text-center">RESUME</h3>
+					<div class="timeline">
+						<div class="timeline__col timeline__col--left">
+
+							<h4 class="timeline__title">EXPERIENCE</h4>
+
+							<div class="timeline__item">
+								<time class="timeline__date" datetime="07-09-2020">
+									2020 - <span>Present</span>
+								</time>
+								<h5 class="timeline__subtitle">
+									<span>Freelancer</span>
+								</h5>
+								<div class="timeline__position">
+									Mark-up developer
+								</div>
+								<div class="timeline__text">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sequi quod exercitationem natus, iste pariatur veniam doloribus cumque culpa nisi! Doloribus accusantium dolor at veniam nisi fugiat odio natus optio.</p>
+								</div>
+							</div>
+
+						</div>
+						<div class="timeline__col timeline__col--right">
+							<h4 class="timeline__title">EDUCATION</h4>
+
+							<div class="timeline__item">
+								<time class="timeline__date" datetime="07-09-2020">
+									09.2020 - 11.2020
+								</time>
+								<h5 class="timeline__subtitle">
+									<span>Mark-up development</span>
+								</h5>
+								<div class="timeline__position">
+									Source IT, Kharkov
+								</div>								
+							</div>
+
+							<div class="timeline__item">
+								<time class="timeline__date" datetime="01-03-2021">
+									03.2020 - 05.2020
+								</time>
+								<h5 class="timeline__subtitle">
+									<span>JavaScript. Front-end development</span>
+								</h5>
+								<div class="timeline__position">
+									Source IT, Kharkov
+								</div>								
+							</div>							
+
+						</div>
+					</div><!--/modal__timeline-->
+
+					<div class="text-center">
+						<a class="button modal__hireme"href="#" data-modal="#modal_hire_me">hire me</a>
+					</div>
+
+				</div><!--/modal__content-->			
+
+			</div><!--/modal__dialog-->
+		</div><!--/modal-->
+
+<!-- Modal-Let's Talk -->
+
+		<div class="modal" id="modal_hire_me">
+			<div class="modal__dialog modal__dialog--sm">
+
+				<button class="modal__close" type="button" data-close>
+					<img src="images\remove-button.svg" alt="Close">
+				</button>								
+
+				<div class="contact">
+
+					<div class="contact__left">
+						<h3 class="modal__title">LET'S TALK!</h3>
+						<div class="modal__subtitle">
+							CALL ME OR SEND ME A REQUEST
+						</div>						
+							<ul class="contact__info">
+								<li class="contact__info-item">
+									<img src="images/phone.svg" alt="phone">
+									(095) 818 74 75
+								</li>
+								<li class="contact__info-item">
+									<img src="images\mail.svg" alt="mail">
+									mrgleb91@gmail.com
+								</li>
+							</ul>
+
+							<form class="form" action="/" method="post">	
+								<div class="form__group">
+									<label class="label" for="input-email">Adress e-mail</label>
+									<input class="input" name="input-email" type="text" id="input-email" placeholder="Adress e-mail">
+								</div>
+
+								<div class="form__group">
+									<label class="label" for="input-text">Request</label>
+									<textarea class="textarea" name="input-text" id="input-text" placeholder="Type your request"></textarea>
+								</div>
+
+								<div class="text-right">
+									<button class="button form__hireme" type="submit">SEND</button>
+								</div>
+								
+								
+							</form>
+
+					</div><!--/contact__left-->	
+
+				</div><!--/contact-->			
+				
+
+			</div><!--/modal__dialog-->
+		</div><!--/modal-->
+		
+
 	</div>
+
+
+<!--JS-->
+
+<script type="text/javascript" src="js/main.js"></script>
+
+
+
+
 </body>
 </html>

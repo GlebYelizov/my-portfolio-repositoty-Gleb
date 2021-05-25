@@ -10,6 +10,20 @@ section.intro {
 		background-image: url(../images/photo_background.png);
 		background-position: right bottom;
 		background-repeat: no-repeat;
+
+		@media (max-width: 1350px) {
+			padding-top: 123px;
+			background-size: 370px auto;
+		}
+		@media (max-width: 767px) {
+			padding-top: 98px;
+			padding-bottom: 50px;
+			background: none;
+		}	
+		@media (max-width: 479px) {
+			background: none;
+		}
+
 		h4 {
 			font-size: 32px;
 			font-weight: 300;
@@ -17,9 +31,7 @@ section.intro {
 			margin-bottom: 8px;
 		}
 		h3 {
-			font-size: 45px;
-			font-weight: 700;
-			color: $black;
+			@include heading;
 			margin-bottom: 6px;
 		}
 		p {
@@ -76,7 +88,16 @@ section.intro {
 						color: $white;
 						background-color: $grey;
 						@include transition_color;
-					}
+					}					
+				}
+				@media (max-width: 1350px) {
+					
+				}
+				@media (max-width: 767px) {
+					
+				}	
+				@media (max-width: 479px) {
+					
 				}
 			}
 			.intro__photo {
@@ -84,6 +105,17 @@ section.intro {
 				right: 100px;
 				bottom: 0;
 				z-index: 3;
+
+				@media (max-width: 1350px) {
+					width: 300px;
+					right: 30px;
+				}
+				@media (max-width: 767px) {
+					display: none;
+				}	
+				@media (max-width: 479px) {
+					display: none;
+				}
 
 			}
 		}
