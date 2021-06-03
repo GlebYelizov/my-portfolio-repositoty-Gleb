@@ -254,19 +254,21 @@ header .header__inner nav {
 }
 @media (max-width: 767px) {
   header .header__inner nav {
-    display: none;
-  }
-  header .header__inner nav.show {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 100%;
+    top: -600%;
     right: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: -1;
     background-color: #fff;
     padding: 16px;
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s linear;
+  }
+  header .header__inner nav.show {
+    top: 99%;
+    transition: all 0.5s linear;
   }
 }
 header .header__inner nav ul {
@@ -283,9 +285,16 @@ header .header__inner nav ul li {
 }
 header .header__inner nav ul li:last-child {
   margin-right: 0px;
+  margin-top: 0px;
+}
+@media (max-width: 767px) {
+  header .header__inner nav ul li:last-child {
+    margin-top: 16px;
+  }
 }
 @media (max-width: 767px) {
   header .header__inner nav ul li {
+    margin-bottom: 50px;
     margin-right: 0;
     padding: 8px 16px;
   }
@@ -330,6 +339,7 @@ header .header__inner .burger {
   width: 30px;
   height: 30px;
   display: none;
+  cursor: pointer;
   padding: 0;
   border: none;
   background: none;
